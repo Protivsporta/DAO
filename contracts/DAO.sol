@@ -101,7 +101,7 @@ contract DAO {
     }
 
     function decreaseNumberOfActiveProposals(uint256 _proposalId) internal {
-        for (uint256 i=0; proposalList[_proposalId].voters.length < i; i++) {
+        for (uint256 i=0; proposalList[_proposalId].voters.length > i; i++) {
             votersList[proposalList[_proposalId].voters[i]].numberOfActiveProposals -= 1; // decrease number of active proposals for voter
         }
     }
