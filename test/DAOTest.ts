@@ -242,7 +242,7 @@ describe("DAO", function() {
             await dao.finishProposal(0);
 
             expect((await dao.votersList(voter.address)).numberOfActiveProposals)
-            .to.be.equal(1)
+            .to.be.equal(0)
         })
     })
 
